@@ -96,11 +96,3 @@ Hospital-Management-SQL-PowerBI/
 - Integrate Python or R for predictive models (e.g., predicting high-cost patients)
 
 ---
-
-## 💼 Made For
-
-I built this project to demonstrate my end-to-end capability in **SQL + Power BI** for real-world data analysis in healthcare.
-
-> 🔗 Connect with me on [LinkedIn](www.linkedin.com/in/richard-jetevu-31a648331/) or view this live in my [Medium blog](https://medium.com/@fezzythrillz/how-i-built-a-hospital-management-dashboard-using-sql-and-power-bi-from-scratch-2f5b2df0d5c1) and GitHub.
-
----
