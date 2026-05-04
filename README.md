@@ -4,7 +4,7 @@ This project demonstrates a simple but powerful healthcare analytics dashboard I
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 - **Domain**: HospitalManagement
 - **Tools Used**: SQL Server, Power BI
@@ -13,34 +13,34 @@ This project demonstrates a simple but powerful healthcare analytics dashboard I
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 
 ### 1. SQL Phase
 
 I manually created tables, inserted mock data, and wrote queries to perform:
 
-#### 📗 Section 1: Basic SQL Queries
+####  Section 1: Basic SQL Queries
 - SELECT, WHERE, ORDER BY, ALIAS
 
-#### 📘 Section 2: Intermediate SQL
+####  Section 2: Intermediate SQL
 - Filtering with multiple conditions
 - Aggregations with `GROUP BY`, `HAVING`
 - Joins (`INNER`, `LEFT`, `RIGHT`, `FULL`, `CROSS`)
 - Subqueries (nested logic)
 - `CASE` statements for categorization
 
-#### 📙 Section 3: Advanced SQL
+####  Section 3: Advanced SQL
 - Views
 - Stored Procedures
 - Triggers (AFTER INSERT/UPDATE for automation)
 
 ---
 
-## 📊 Power BI Phase
+##  Power BI Phase
 
 I connected Power BI to SQL Server and built a full visual dashboard using cleaned, transformed data.
 
-### 📌 Key Insights Visualized
+###  Key Insights Visualized
 
 | Chart | Description |
 |-------|-------------|
@@ -57,7 +57,7 @@ I connected Power BI to SQL Server and built a full visual dashboard using clean
 
 ---
 
-## 📂 Folder Structure
+##  Folder Structure
 
 ```
 Hospital-Management-SQL-PowerBI/
@@ -88,7 +88,7 @@ Hospital-Management-SQL-PowerBI/
 
 ---
 
-## 🚀 Future Ideas
+##  Future Ideas
 
 - Add Excel export option for reports
 - Add patient visit frequency analytics
