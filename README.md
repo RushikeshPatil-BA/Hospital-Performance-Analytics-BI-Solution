@@ -85,14 +85,3 @@ Hospital-Management-SQL-PowerBI/
 │
 └── README.md
 ```
-
----
-
-##  Future Ideas
-
-- Add Excel export option for reports
-- Add patient visit frequency analytics
-- Automate billing trigger email alerts
-- Integrate Python or R for predictive models (e.g., predicting high-cost patients)
-
----
