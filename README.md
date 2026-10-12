@@ -1,87 +1,65 @@
-# Hospital Management Analytics with SQL & Power BI
+# Hospital Performance Analytics: SQL Server + Power BI
 
-This project demonstrates a simple but powerful healthcare analytics dashboard I created **from scratch** using SQL Server and Power BI. It simulates a hospital environment with patients, doctors, appointments, lab tests, and billing data.
+![SQL Server](https://img.shields.io/badge/SQL%20Server-T--SQL-CC2927?logo=microsoftsqlserver&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi&logoColor=black)
 
----
+An end-to-end healthcare analytics project built from scratch. I designed a hospital database in SQL Server, wrote queries from basic to advanced, then connected Power BI to it to analyse doctor workload, billing and patient demographics.
 
-## Project Overview
-
-- **Domain**: HospitalManagement
-- **Tools Used**: SQL Server, Power BI
-- **Skills Demonstrated**: SQL querying, data modeling, DAX logic, Power BI visualization
-- **Goal**: To uncover insights into hospital operations like doctor workload, billing trends, and patient demographics.
+![Dashboard overview](screenshots/12_dashboard_overview.png)
 
 ---
 
-## Project Structure
+## Business questions
 
-### 1. SQL Phase
+- How is appointment workload spread across doctors?
+- Which patients and billing tiers drive revenue?
+- What does the patient population look like by age group and gender?
 
-I manually created tables, inserted mock data, and wrote queries to perform:
+## 1 · Database design (SQL Server)
 
-####  Section 1: Basic SQL Queries
-- SELECT, WHERE, ORDER BY, ALIAS
+**9 related tables:** Patients, Doctors, Appointments, Prescriptions, MedicalRecords, Billing, LabTests, MedicalHistory and LabResults. They are linked by primary and foreign keys and loaded with mock data.
 
-####  Section 2: Intermediate SQL
-- Filtering with multiple conditions
-- Aggregations with `GROUP BY`, `HAVING`
-- Joins (`INNER`, `LEFT`, `RIGHT`, `FULL`, `CROSS`)
-- Subqueries (nested logic)
-- `CASE` statements for categorization
+![Tables](screenshots/1_tables.png)
 
-####  Section 3: Advanced SQL
-- Views
-- Stored Procedures
-- Triggers (AFTER INSERT/UPDATE for automation)
+## 2 · SQL analysis
 
----
+| Level | Techniques | Example |
+|---|---|---|
+| Basic | `SELECT`, `WHERE`, `ORDER BY`, aliases | [screenshot](screenshots/3_basic_select.png) |
+| Intermediate | `GROUP BY` / `HAVING`, `INNER` / `LEFT` / `RIGHT` / `FULL` / `CROSS` joins, subqueries, `CASE` | [join](screenshots/4_join_query.png) · [group by](screenshots/5_groupby_having.png) · [age groups](screenshots/6_case_statement_of_agegroup.png) |
+| Advanced | 4 views, 2 stored procedures, 2 audit triggers (patient insert log, billing update audit) | [trigger](screenshots/7_trigger_code.png) |
 
-##  Power BI Phase
+All the SQL is in [`hospital_management.sql`](hospital_management.sql).
 
-I connected Power BI to SQL Server and built a full visual dashboard using cleaned, transformed data.
+## 3 · Power BI dashboard
 
-###  Key Insights Visualized
+Power BI connects directly to SQL Server, where the data was cleaned and modelled.
 
-| Chart | Description |
-|-------|-------------|
-| **Total Appointments by Doctors** | Measures each doctor's workload. Helpful for staffing and performance monitoring. |
-| **Total Billing by Patients** | Shows which patients contribute the most to revenue. |
-| **Billing Category (Donut Chart)** | Breaks revenue down by cost tiers: Low, Medium, High. |
-| **Patients by Age Group (Pie Chart)** | Distribution of patients across age categories (`young_adults`, `adults`, `seniors`). |
-| **Total Revenue Card** | Displays total billing amount from all patients. |
-| **Interactive Filters** | By doctor name, billing category, and gender for dynamic reporting. |
+| Visual | Insight |
+|---|---|
+| Appointments by doctor | Workload balance, which supports staffing decisions |
+| Billing by patient | Highest-revenue patients |
+| Billing category (donut) | Revenue split into Low, Medium and High tiers |
+| Patients by age group (pie) | Young adults vs adults vs seniors |
+| Total revenue card | Headline billing total |
+| Slicers | Filter by doctor, billing category and gender |
 
-🖼️ Example Dashboard:
+| Data model | Doctor appointments |
+|---|---|
+| ![](screenshots/8_powerbi_model_view.png) | ![](screenshots/10_doctor_appointments_chart.png) |
 
-![Dashboard Overview](screenshots/12_dashboard_overview.png)
-
----
-
-##  Folder Structure
+## Files
 
 ```
-Hospital-Management-SQL-PowerBI/
-│
-├── SQL_Code/
-│   ├── create_tables.sql
-│   ├── insert_data.sql
-│   ├── queries.sql
-│   └── trigger_procedure_view.sql
-│
-├── PowerBI_Dashboard/
-│   ├── powerbi_model.pbix
-│   └── screenshots/
-│       ├── 1_tables.png
-│       ├── 2_insert.png
-│       ├── 3_basic_select.png
-│       ├── 4_join_query.png
-│       ├── 5_groupby_having.png
-│       ├── 6_case_or_subquery.png
-│       ├── 8_powerbi_model_view.png
-│       ├── 9_cleaned_table.png
-│       ├── 10_barchart_doctor_appt.png
-│       ├── 11_billing_category_chart.png
-│       └── 12_dashboard_overview.png
-│
-└── README.md
+├── hospital_management.sql                    Schema, data, queries, views, procedures, triggers
+├── Hospital_Management_Analytics_Dashboard.pbix
+└── screenshots/                               SQL and dashboard screenshots (1–12)
 ```
+
+## Skills shown
+
+Relational database design · T-SQL (joins, subqueries, CASE, views, stored procedures, triggers) · data modelling · Power BI and DAX · dashboard design
+
+---
+
+**Rushikesh Patil** · [GitHub](https://github.com/RushikeshPatil-BA)
